@@ -11,6 +11,7 @@ class BlogListScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: null,
         title: Text('Blogs'),
       ),
       body: FutureBuilder(

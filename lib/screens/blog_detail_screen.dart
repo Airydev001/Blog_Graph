@@ -42,17 +42,23 @@ class BlogDetailScreen extends StatelessWidget {
             : Consumer<BlogProvider>(
                 builder: (ctx, blogProvider, _) => Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(blogProvider.selectedBlog!.title,
-                          style: Theme.of(context).textTheme.headlineMedium),
-                      SizedBox(height: 10),
-                      Text(blogProvider.selectedBlog!.subTitle,
-                          style: Theme.of(context).textTheme.displaySmall),
-                      SizedBox(height: 10),
-                      Text(blogProvider.selectedBlog!.body),
-                    ],
+                  child: SingleChildScrollView(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(blogProvider.selectedBlog!.title,
+                              style:
+                                  Theme.of(context).textTheme.headlineMedium),
+                          SizedBox(height: 10),
+                          Text(blogProvider.selectedBlog!.subTitle,
+                              style: Theme.of(context).textTheme.titleSmall),
+                          SizedBox(height: 10),
+                          Text(blogProvider.selectedBlog!.body),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),

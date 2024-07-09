@@ -24,9 +24,11 @@ class MyApp extends StatelessWidget {
       child: GraphQLProvider(
         client: graphqlClient,
         child: MaterialApp(
+          debugShowCheckedModeBanner: false,
           navigatorKey: navigatorKey,
           title: 'Blog App',
           theme: ThemeData(
+            fontFamily: 'Roboto',
             primarySwatch: Colors.teal,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
